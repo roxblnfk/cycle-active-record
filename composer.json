@@ -1,22 +1,23 @@
 {
-  "name": ":vendor_slug/:package_slug",
-  "description": ":package_description",
+  "name": "roxblnfk/cycle-active-record",
+  "description": "Cycle Active Record",
   "keywords": [
-    ":vendor_name",
+    "roxblnfk",
     "spiral",
-    ":package_slug"
+    "cycle-active-record"
   ],
-  "homepage": "https://github.com/:vendor_slug/:package_slug",
+  "homepage": "https://github.com/roxblnfk/cycle-active-record",
   "license": "MIT",
   "authors": [
     {
-      "name": ":author_name",
-      "email": "author@domain.com",
+      "name": "Aleksei Gagarin",
+      "email": "roxblnfk@ya.ru",
       "role": "Developer"
     }
   ],
   "require": {
-    "php": "^8.0",
+    "php": ">=8.0",
+    "cycle/orm": "2.0",
     "spiral/boot": "^2.9",
     "spiral/console": "^2.9"
   },
@@ -28,13 +29,13 @@
   },
   "autoload": {
     "psr-4": {
-      "VendorName\\Skeleton\\": "src"
+      "Cycle\\AR\\CycleActiveRecord\\": "src"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "VendorName\\Skeleton\\Tests\\App\\": "tests/app",
-      "VendorName\\Skeleton\\Tests\\": "tests/src"
+      "Cycle\\AR\\CycleActiveRecord\\Tests\\App\\": "tests/app",
+      "Cycle\\AR\\CycleActiveRecord\\Tests\\": "tests/src"
     }
   },
   "scripts": {
@@ -47,7 +48,7 @@
   "extra": {
     "spiral": {
       "bootloaders": [
-        "VendorName\\Skeleton\\Bootloader\\SkeletonBootloader"
+        "Cycle\\AR\\CycleActiveRecord\\Bootloader\\CycleActiveRecordBootloader"
       ]
     }
   },
