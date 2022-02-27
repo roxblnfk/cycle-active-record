@@ -17,13 +17,13 @@
   ],
   "require": {
     "php": ">=8.0",
-    "cycle/orm": "2.0",
-    "spiral/boot": "^2.9",
-    "spiral/console": "^2.9"
+    "cycle/orm": "2.0"
   },
   "require-dev": {
     "mockery/mockery": "^1.5",
     "phpunit/phpunit": "^9.5",
+    "spiral/boot": "^2.9",
+    "spiral/cycle-bridge": "^1.1",
     "spiral/testing": "^1.0",
     "vimeo/psalm": "^4.9"
   },
@@ -43,7 +43,10 @@
     "psalm": "vendor/bin/psalm --config=psalm.xml ./src"
   },
   "config": {
-    "sort-packages": true
+    "sort-packages": true,
+    "allow-plugins": {
+      "spiral/composer-publish-plugin": false
+    }
   },
   "extra": {
     "spiral": {

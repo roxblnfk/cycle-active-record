@@ -37,27 +37,27 @@ abstract class Model
 
     final public function save(bool $cascade = true): StateInterface
     {
-        return StaticCarrier::getEntityManager()->persist($this, $cascade)->run(throwException: false);
+        return StaticOrigin::getEntityManager()->persist($this, $cascade)->run(throwException: false);
     }
 
     final public function delete(bool $cascade = true): StateInterface
     {
-        return StaticCarrier::getEntityManager()->delete($this, $cascade)->run(throwException: false);
+        return StaticOrigin::getEntityManager()->delete($this, $cascade)->run(throwException: false);
     }
 
     final public function prepare(bool $cascade = true): EntityManager
     {
-        return StaticCarrier::getEntityManager()->persist($this, $cascade);
+        return StaticOrigin::getEntityManager()->persist($this, $cascade);
     }
 
     final public function prepareDeletion(bool $cascade = true): EntityManager
     {
-        return StaticCarrier::getEntityManager()->delete($this, $cascade);
+        return StaticOrigin::getEntityManager()->delete($this, $cascade);
     }
 
     private static function getOrm(): ORMInterface
     {
-        return StaticCarrier::getOrm();
+        return StaticOrigin::getOrm();
     }
 
     /**
