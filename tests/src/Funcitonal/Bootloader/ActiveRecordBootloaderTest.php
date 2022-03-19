@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Cycle\AR\CycleActiveRecord\Tests\Funcitonal\Bootloader;
+namespace Cycle\ActiveRecord\Tests\Funcitonal\Bootloader;
 
-use Cycle\AR\CycleActiveRecord\StaticOrigin;
-use Cycle\AR\CycleActiveRecord\Tests\TestCase;
+use Cycle\ActiveRecord\StaticOrigin;
+use Cycle\ActiveRecord\Tests\TestCase;
 use Cycle\ORM\ORMInterface;
 
 final class ActiveRecordBootloaderTest extends TestCase

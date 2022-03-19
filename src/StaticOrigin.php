@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Cycle\AR\CycleActiveRecord;
+namespace Cycle\ActiveRecord;
 
 use Cycle\ORM\EntityManager;
 use Cycle\ORM\EntityManagerInterface;

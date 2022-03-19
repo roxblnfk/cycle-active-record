@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Cycle\AR\CycleActiveRecord\Bootloader;
+namespace Cycle\ActiveRecord\Boot;
 
-use Cycle\AR\CycleActiveRecord\StaticOrigin;
+use Cycle\ActiveRecord\StaticOrigin;
 use Psr\Container\ContainerInterface;
 use Spiral\Boot\Bootloader\Bootloader;
 use Spiral\Cycle\Bootloader\CycleOrmBootloader;

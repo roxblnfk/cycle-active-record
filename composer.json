@@ -1,60 +1,63 @@
 {
-  "name": "roxblnfk/cycle-active-record",
-  "description": "Cycle Active Record",
-  "keywords": [
-    "roxblnfk",
-    "spiral",
-    "cycle-active-record"
-  ],
-  "homepage": "https://github.com/roxblnfk/cycle-active-record",
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "Aleksei Gagarin",
-      "email": "roxblnfk@ya.ru",
-      "role": "Developer"
-    }
-  ],
-  "require": {
-    "php": ">=8.0",
-    "cycle/orm": "2.0"
-  },
-  "require-dev": {
-    "mockery/mockery": "^1.5",
-    "phpunit/phpunit": "^9.5",
-    "spiral/boot": "^2.9",
-    "spiral/cycle-bridge": "^1.1",
-    "spiral/testing": "^1.0",
-    "vimeo/psalm": "^4.9"
-  },
-  "autoload": {
-    "psr-4": {
-      "Cycle\\AR\\CycleActiveRecord\\": "src"
-    }
-  },
-  "autoload-dev": {
-    "psr-4": {
-      "Cycle\\AR\\CycleActiveRecord\\Tests\\App\\": "tests/app",
-      "Cycle\\AR\\CycleActiveRecord\\Tests\\": "tests/src"
-    }
-  },
-  "scripts": {
-    "test": "vendor/bin/phpunit",
-    "psalm": "vendor/bin/psalm --config=psalm.xml ./src"
-  },
-  "config": {
-    "sort-packages": true,
-    "allow-plugins": {
-      "spiral/composer-publish-plugin": false
-    }
-  },
-  "extra": {
-    "spiral": {
-      "bootloaders": [
-        "Cycle\\AR\\CycleActiveRecord\\Bootloader\\CycleActiveRecordBootloader"
-      ]
-    }
-  },
-  "minimum-stability": "dev",
-  "prefer-stable": true
+    "name": "roxblnfk/cycle-active-record",
+    "description": "Cycle Active Record",
+    "keywords": [
+        "roxblnfk",
+        "spiral",
+        "cycle-active-record"
+    ],
+    "homepage": "https://github.com/roxblnfk/cycle-active-record",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Aleksei Gagarin",
+            "email": "roxblnfk@ya.ru",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=8.0",
+        "cycle/orm": "^2.0"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-latest",
+        "mockery/mockery": "^1.5",
+        "phpunit/phpunit": "^9.5",
+        "spiral/boot": "^2.10",
+        "cycle/entity-behavior": "^1.0",
+        "spiral/cycle-bridge": "^1.1",
+        "spiral/testing": "^1.0",
+        "spiral/logger": "^1.10",
+        "vimeo/psalm": "^4.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "Cycle\\ActiveRecord\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Cycle\\ActiveRecord\\Tests\\App\\": "tests/app",
+            "Cycle\\ActiveRecord\\Tests\\": "tests/src"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "psalm": "vendor/bin/psalm --config=psalm.xml ./src"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "spiral/composer-publish-plugin": false
+        }
+    },
+    "extra": {
+        "spiral": {
+            "bootloaders": [
+                "Cycle\\ActiveRecord\\Bootloader\\CycleActiveRecordBootloader"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }

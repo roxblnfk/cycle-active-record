@@ -1,9 +1,11 @@
 <?php
 
-namespace Cycle\AR\CycleActiveRecord\Tests;
+namespace Cycle\ActiveRecord\Tests;
 
-use Cycle\AR\CycleActiveRecord\Bootloader\ActiveRecordBootloader;
+use Cycle\ActiveRecord\Boot\ActiveRecordBootloader;
+use Cycle\ActiveRecord\Tests\App\Boot\AppBootloader;
 use Spiral\Boot\Bootloader\ConfigurationBootloader;
+use Spiral\Monolog\Bootloader\MonologBootloader;
 
 class TestCase extends \Spiral\Testing\TestCase
 {
@@ -17,6 +19,8 @@ class TestCase extends \Spiral\Testing\TestCase
         return [
             ConfigurationBootloader::class,
             ActiveRecordBootloader::class,
+            AppBootloader::class,
+            MonologBootloader::class,
         ];
     }
 }

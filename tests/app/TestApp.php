@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Cycle\AR\CycleActiveRecord\Tests\App;
+namespace Cycle\ActiveRecord\Tests\App;
 
 use Spiral\Testing\Traits\TestableKernel;
 use Spiral\Testing\TestApp as BaseApp;

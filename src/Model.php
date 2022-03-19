@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Cycle\AR\CycleActiveRecord;
+namespace Cycle\ActiveRecord;
 
 use Cycle\ORM\EntityManager;
 use Cycle\ORM\ORMInterface;
@@ -22,9 +22,9 @@ abstract class Model
         return self::getRepository()->findByPK($pk);
     }
 
-    final public static function findAll(mixed $pk): iterable
+    final public static function findAll(array $scope = []): iterable
     {
-        return self::getRepository()->findAll($pk);
+        return self::getRepository()->findAll($scope);
     }
 
     /**
@@ -37,12 +37,16 @@ abstract class Model
 
     final public function save(bool $cascade = true): StateInterface
     {
-        return StaticOrigin::getEntityManager()->persist($this, $cascade)->run(throwException: false);
+        $em = StaticOrigin::getEntityManager();
+        $em->persist($this, $cascade);
+        return $em->run(throwException: false);
     }
 
     final public function delete(bool $cascade = true): StateInterface
     {
-        return StaticOrigin::getEntityManager()->delete($this, $cascade)->run(throwException: false);
+        return StaticOrigin::getEntityManager()
+            ->delete($this, $cascade)
+            ->run(throwException: false);
     }
 
     final public function prepare(bool $cascade = true): EntityManager

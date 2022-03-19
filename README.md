@@ -27,7 +27,7 @@ After package install you need to register bootloader from the package.
 ```php
 protected const LOAD = [
     // ...
-    \Cycle\AR\CycleActiveRecord\Bootloader\ActiveRecordBootloader::class,
+    \Cycle\ActiveRecord\Boot\ActiveRecordBootloader::class,
 ];
 ```
 
