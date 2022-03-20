@@ -1,11 +1,14 @@
-# This is my package cycle-active-record
+# Cycle Active Record
 
 [![PHP](https://img.shields.io/packagist/php-v/roxblnfk/cycle-active-record.svg?style=flat-square)](https://packagist.org/packages/roxblnfk/cycle-active-record)
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/roxblnfk/cycle-active-record.svg?style=flat-square)](https://packagist.org/packages/roxblnfk/cycle-active-record)
 [![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/roxblnfk/cycle-active-record/run-tests?label=tests&style=flat-square)](https://github.com/roxblnfk/cycle-active-record/actions?query=workflow%3Arun-tests+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/roxblnfk/cycle-active-record.svg?style=flat-square)](https://packagist.org/packages/roxblnfk/cycle-active-record)
 
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
+ActiveRecord pattern based on Cycle ORM. AR entities work fine with mappers, repositories, behaviors and other Cycle
+features.
+
+The package just adds to entity such proxy methods like `save` and `delete` using a class inheritance.
 
 ## Requirements
 
@@ -33,6 +36,45 @@ protected const LOAD = [
 
 > Note: if you are using [`spiral-packages/discoverer`](https://github.com/spiral-packages/discoverer),
 > you don't need to register bootloader by yourself.
+
+## Example
+
+Entity:
+```php
+use Cycle\ActiveRecord\ActiveRecord;
+use Cycle\Annotated\Annotation\Column;
+use Cycle\Annotated\Annotation\Entity;
+
+#[Entity(table: 'user')]
+class User extends ActiveRecord
+{
+    #[Column(type: 'primary', typecast: 'int')]
+    public int $id;
+
+    public function __construct(
+        #[Column(type: 'string')]
+        public string $name
+    ) {}
+}
+```
+
+Usage:
+
+```php
+$user1 = new User('Lia');
+$user2 = new User('Zaza');
+
+// Persisting
+$user1->prepare();
+$user2->save(); // Save current and prepared entities
+
+// Find and delete
+User::findByPK(10)?->delete();
+
+// Delete multiple
+$user1->prepareDeletion();
+$user2->delete();
+```
 
 ## Testing
 
