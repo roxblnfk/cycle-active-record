@@ -10,7 +10,7 @@ use Cycle\ORM\RepositoryInterface;
 use Cycle\ORM\Select;
 use Cycle\ORM\Transaction\StateInterface;
 
-abstract class Model
+abstract class ActiveRecord
 {
     final public static function findOne(array $scope): ?static
     {

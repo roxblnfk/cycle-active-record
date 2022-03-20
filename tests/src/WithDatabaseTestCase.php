@@ -39,7 +39,7 @@ class WithDatabaseTestCase extends TestCase
         ]);
     }
 
-    protected function selectEntity(string $role, bool $cleanHeap = true): Select
+    protected function selectEntity(string $role, bool $cleanHeap = false): Select
     {
         $orm = $this->getContainer()->get(ORMInterface::class);
         $cleanHeap and $orm->getHeap()->clean();
