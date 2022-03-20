@@ -2,9 +2,8 @@
     "name": "roxblnfk/cycle-active-record",
     "description": "Cycle Active Record",
     "keywords": [
-        "roxblnfk",
-        "spiral",
-        "cycle-active-record"
+        "cycle-orm",
+        "active-record"
     ],
     "homepage": "https://github.com/roxblnfk/cycle-active-record",
     "license": "MIT",

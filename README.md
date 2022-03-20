@@ -12,7 +12,7 @@ This is where your description should go. Limit it to a paragraph or two. Consid
 Make sure that your server is configured with following PHP version and extensions:
 
 - PHP 8.0+
-- Spiral framework 2.9+
+- Spiral framework 2.10+
 
 ## Installation
 
@@ -27,7 +27,7 @@ After package install you need to register bootloader from the package.
 ```php
 protected const LOAD = [
     // ...
-    \Cycle\ActiveRecord\Boot\ActiveRecordBootloader::class,
+    \Cycle\ActiveRecord\Boot\CycleActiveRecordBootloader::class,
 ];
 ```
 
@@ -39,18 +39,6 @@ protected const LOAD = [
 ```bash
 composer test
 ```
-
-## Changelog
-
-Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
-
-## Contributing
-
-Please see [CONTRIBUTING](.github/CONTRIBUTING.md) for details.
-
-## Security Vulnerabilities
-
-Please review [our security policy](../../security/policy) on how to report security vulnerabilities.
 
 ## License
 

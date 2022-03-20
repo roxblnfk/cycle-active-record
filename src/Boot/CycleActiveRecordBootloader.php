@@ -9,7 +9,7 @@ use Psr\Container\ContainerInterface;
 use Spiral\Boot\Bootloader\Bootloader;
 use Spiral\Cycle\Bootloader\CycleOrmBootloader;
 
-class ActiveRecordBootloader extends Bootloader
+class CycleActiveRecordBootloader extends Bootloader
 {
     protected const BINDINGS = [];
     protected const SINGLETONS = [];
