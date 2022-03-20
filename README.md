@@ -74,6 +74,9 @@ User::findByPK(10)?->delete();
 // Delete multiple
 $user1->prepareDeletion();
 $user2->delete();
+
+// Use SelectQuery
+User::find()->where('id', '>', '10')->fetchData();
 ```
 
 ## Testing
