@@ -15,7 +15,10 @@ The package just adds to entity such proxy methods like `save` and `delete` usin
 Make sure that your server is configured with following PHP version and extensions:
 
 - PHP 8.0+
-- Spiral framework 2.10+
+- One of the Cycle ORM adapters:
+  - [`spiral/cycle-bridge`](https://github.com/spiral/cycle-bridge) package for the
+    [Spiral Framework](https://github.com/spiral/framework)
+  - [`yiisoft/yii-cycle`](https://github.com/yiisoft/yii-cycle) ^2.0 package for the Yii 3
 
 ## Installation
 
@@ -27,15 +30,16 @@ composer require roxblnfk/cycle-active-record
 
 After package install you need to register bootloader from the package.
 
+> If you are installing the package on the Yii 3 or Spiral Framework with the
+> [`spiral-packages/discoverer`](https://github.com/spiral-packages/discoverer) package
+> then you don't need to register bootloader by yourself. It will be registered automatically.
+
 ```php
 protected const LOAD = [
     // ...
     \Cycle\ActiveRecord\Boot\CycleActiveRecordBootloader::class,
 ];
 ```
-
-> Note: if you are using [`spiral-packages/discoverer`](https://github.com/spiral-packages/discoverer),
-> you don't need to register bootloader by yourself.
 
 ## Example
 
