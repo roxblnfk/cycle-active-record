@@ -55,6 +55,9 @@
             "bootloaders": [
                 "Cycle\\ActiveRecord\\Bootloader\\CycleActiveRecordBootloader"
             ]
+        },
+        "config-plugin": {
+            "bootstrap": "config/yii-bootstrap.php"
         }
     },
     "minimum-stability": "dev",
