@@ -30,15 +30,28 @@ composer require roxblnfk/cycle-active-record
 
 After package install you need to register bootloader from the package.
 
+> **Note**
 > If you are installing the package on the Yii 3 or Spiral Framework with the
 > [`spiral-packages/discoverer`](https://github.com/spiral-packages/discoverer) package
 > then you don't need to register bootloader by yourself. It will be registered automatically.
+
+### Spiral Framework without discoverer
+
+Update Bootloader list
 
 ```php
 protected const LOAD = [
     // ...
     \Cycle\ActiveRecord\Boot\CycleActiveRecordBootloader::class,
 ];
+```
+
+### Custom application
+
+After Container initialization just register it in AR static class:
+
+```php
+\Cycle\ActiveRecord\StaticOrigin::setContainer($container);
 ```
 
 ## Example
