@@ -2,7 +2,7 @@
 
 [![PHP](https://img.shields.io/packagist/php-v/roxblnfk/cycle-active-record.svg?style=flat-square)](https://packagist.org/packages/roxblnfk/cycle-active-record)
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/roxblnfk/cycle-active-record.svg?style=flat-square)](https://packagist.org/packages/roxblnfk/cycle-active-record)
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/roxblnfk/cycle-active-record/run-tests?label=tests&style=flat-square)](https://github.com/roxblnfk/cycle-active-record/actions?query=workflow%3Arun-tests+branch%3Amain)
+[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/roxblnfk/cycle-active-record/run-tests.yml?label=tests&style=flat-square)](https://github.com/roxblnfk/cycle-active-record/actions?query=workflow%3Arun-tests+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/roxblnfk/cycle-active-record.svg?style=flat-square)](https://packagist.org/packages/roxblnfk/cycle-active-record)
 [![dependency status](https://php.package.health/packages/roxblnfk/cycle-active-record/dev-master/status.svg)](https://php.package.health/packages/roxblnfk/cycle-active-record/dev-master)
 
