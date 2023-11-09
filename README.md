@@ -32,7 +32,7 @@ After package install you need to register bootloader from the package.
 
 > **Note**
 > If you are installing the package on the Yii 3 or Spiral Framework with the
-> [`spiral-packages/discoverer`](https://github.com/spiral-packages/discoverer) package
+> [`spiral-packages/discoverer`](https://github.com/spiral-packages/discoverer) package,
 > then you don't need to register bootloader by yourself. It will be registered automatically.
 
 ### Spiral Framework without discoverer
